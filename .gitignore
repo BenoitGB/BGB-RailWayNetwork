@@ -1,3 +1,6 @@
+# hiden directories
+.gitPages/
+
 # Prerequisites
 *.d
 
