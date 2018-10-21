@@ -1,0 +1,236 @@
+EESchema Schematic File Version 4
+LIBS:rwnStarterBoard-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 7
+Title "RailWay Network Starter Board"
+Date "2018-10-20"
+Rev "1.1"
+Comp "BGB Developpment"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Microchip_PIC16:PIC16F628A-IP U1
+U 1 1 5BB7C2E4
+P 4500 3350
+F 0 "U1" H 4500 4228 50  0000 C CNN
+F 1 "PIC16F628A-IP" H 4500 4137 50  0000 C CNN
+F 2 "Package_DIP:DIP-18_W7.62mm" H 4500 3350 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/40300c.pdf" H 4500 3350 50  0001 C CNN
+	1    4500 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5BB7C36C
+P 4450 5200
+F 0 "#PWR02" H 4450 4950 50  0001 C CNN
+F 1 "GND" H 4455 5027 50  0000 C CNN
+F 2 "" H 4450 5200 50  0001 C CNN
+F 3 "" H 4450 5200 50  0001 C CNN
+	1    4450 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR01
+U 1 1 5BB7C3D9
+P 4450 4600
+F 0 "#PWR01" H 4450 4450 50  0001 C CNN
+F 1 "VCC" H 4467 4773 50  0000 C CNN
+F 2 "" H 4450 4600 50  0001 C CNN
+F 3 "" H 4450 4600 50  0001 C CNN
+	1    4450 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5BB7C414
+P 4450 4900
+F 0 "C1" H 4565 4946 50  0000 L CNN
+F 1 "100nF" H 4565 4855 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 4488 4750 50  0001 C CNN
+F 3 "~" H 4450 4900 50  0001 C CNN
+	1    4450 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 4600 4450 4750
+Wire Wire Line
+	4450 5050 4450 5200
+$Sheet
+S 1750 2450 800  700 
+U 5BB7C79D
+F0 "RS485Block" 50
+F1 "../Blocks/rwnRS485Block.sch" 50
+F2 "RX" O R 2550 2600 50 
+F3 "TX" I R 2550 2700 50 
+F4 "RWRS" I R 2550 2800 50 
+$EndSheet
+$Comp
+L power:GND #PWR04
+U 1 1 5BB7C923
+P 4500 4150
+F 0 "#PWR04" H 4500 3900 50  0001 C CNN
+F 1 "GND" H 4505 3977 50  0000 C CNN
+F 2 "" H 4500 4150 50  0001 C CNN
+F 3 "" H 4500 4150 50  0001 C CNN
+	1    4500 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR03
+U 1 1 5BB7C952
+P 4500 2350
+F 0 "#PWR03" H 4500 2200 50  0001 C CNN
+F 1 "VCC" H 4517 2523 50  0000 C CNN
+F 2 "" H 4500 2350 50  0001 C CNN
+F 3 "" H 4500 2350 50  0001 C CNN
+	1    4500 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 4150 4500 4050
+Wire Wire Line
+	3400 3050 3100 3050
+Wire Wire Line
+	3400 3250 3100 3250
+$Sheet
+S 7450 1800 1600 1150
+U 5BBC86A5
+F0 "rwnSLIBlock" 50
+F1 "../Blocks/rwnSLIBlock.sch" 50
+F2 "STATUS0" I L 7450 2050 50 
+F3 "STATUS1" I L 7450 2400 50 
+$EndSheet
+Wire Wire Line
+	7450 2050 6400 2050
+$Sheet
+S 6300 4350 1050 350 
+U 5BBC89E6
+F0 "rwnResetBlock" 50
+F1 "../Blocks/rwnResetBlock.sch" 50
+F2 "RESET" I L 6300 4500 50 
+$EndSheet
+Wire Wire Line
+	5600 3450 6100 3450
+Wire Wire Line
+	6100 3450 6100 4500
+Wire Wire Line
+	6100 4500 6300 4500
+Wire Wire Line
+	3400 3650 3200 3650
+Wire Wire Line
+	3400 2950 3200 2950
+Wire Wire Line
+	5800 3650 5600 3650
+$Sheet
+S 6700 3100 500  350 
+U 5BC5E734
+F0 "rwnI2CESBlock" 50
+F1 "../Blocks/rwnI2CESBlock.sch" 50
+F2 "SDA" I L 6700 3150 50 
+F3 "SCL" I L 6700 3250 50 
+F4 "IO" I L 6700 3350 50 
+$EndSheet
+$Sheet
+S 6450 3650 500  450 
+U 5BC5EB57
+F0 "rwnServoMxBlock" 50
+F1 "../Blocks/rwnServoMxBlock.sch" 50
+F2 "A0" I L 6450 3750 50 
+F3 "A1" I L 6450 3850 50 
+F4 "CMD" I L 6450 3950 50 
+$EndSheet
+Wire Wire Line
+	4500 2350 4500 2650
+Wire Wire Line
+	6450 3750 5800 3750
+Wire Wire Line
+	5800 3750 5800 3650
+Wire Wire Line
+	6450 3850 5850 3850
+Wire Wire Line
+	5850 3850 5850 3550
+Wire Wire Line
+	5600 3550 5850 3550
+Wire Wire Line
+	6450 3950 3200 3950
+Wire Wire Line
+	3200 3950 3200 3650
+Wire Wire Line
+	6500 2400 6500 2950
+Wire Wire Line
+	6500 2400 7450 2400
+Wire Wire Line
+	5600 3150 6700 3150
+Wire Wire Line
+	5600 3250 6700 3250
+Wire Wire Line
+	6700 3350 5600 3350
+$Sheet
+S 1400 3300 700  450 
+U 5BC6F30C
+F0 "rwnTrackBlock" 50
+F1 "../Blocks/rwnTrackBlock.sch" 50
+F2 "PWM" I R 2100 3400 50 
+F3 "DIR" I R 2100 3500 50 
+F4 "-DIR" I R 2100 3600 50 
+$EndSheet
+Wire Wire Line
+	3200 2950 3200 2600
+Wire Wire Line
+	3200 2600 2550 2600
+Wire Wire Line
+	3100 3050 3100 2700
+Wire Wire Line
+	3100 2700 2550 2700
+Wire Wire Line
+	3000 3150 3000 2800
+Wire Wire Line
+	3000 2800 2550 2800
+Wire Wire Line
+	3000 3150 3400 3150
+Wire Wire Line
+	2850 3350 2850 3400
+Wire Wire Line
+	2850 3350 3400 3350
+Wire Wire Line
+	2900 3450 2900 3500
+Wire Wire Line
+	2900 3450 2950 3450
+Wire Wire Line
+	6400 3050 5600 3050
+Wire Wire Line
+	6400 2050 6400 3050
+Wire Wire Line
+	5600 2950 6500 2950
+$Comp
+L 74xx:74LS05 U8
+U 3 1 5BCAE4B0
+P 2650 3750
+F 0 "U8" H 2650 3433 50  0000 C CNN
+F 1 "74LS05" H 2650 3524 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 2650 3750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS05" H 2650 3750 50  0001 C CNN
+	3    2650 3750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2100 3400 2850 3400
+Wire Wire Line
+	2100 3500 2900 3500
+Wire Wire Line
+	2350 3750 2350 3600
+Wire Wire Line
+	2350 3600 2100 3600
+Wire Wire Line
+	2950 3750 2950 3450
+Connection ~ 2950 3450
+Wire Wire Line
+	2950 3450 3400 3450
+$EndSCHEMATC

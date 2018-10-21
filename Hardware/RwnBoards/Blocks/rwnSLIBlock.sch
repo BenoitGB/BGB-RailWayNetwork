@@ -1,0 +1,161 @@
+EESchema Schematic File Version 4
+LIBS:rwnStarterBoard-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 7
+Title "RailWay Network - System LED Indicator 2"
+Date "2018-10-05"
+Rev "1.1"
+Comp "BGB Developpment"
+Comment1 "using 1 upto 3 LEDs"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:GND #PWR014
+U 1 1 5BB7CBFE
+P 3300 2950
+F 0 "#PWR014" H 3300 2700 50  0001 C CNN
+F 1 "GND" H 3305 2777 50  0000 C CNN
+F 2 "" H 3300 2950 50  0001 C CNN
+F 3 "" H 3300 2950 50  0001 C CNN
+	1    3300 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 5BB7CC6D
+P 3550 1950
+F 0 "D2" H 3542 1695 50  0000 C CNN
+F 1 "Green LED" H 3542 1786 50  0000 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 3550 1950 50  0001 C CNN
+F 3 "~" H 3550 1950 50  0001 C CNN
+	1    3550 1950
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D4
+U 1 1 5BB7CD2A
+P 3550 2700
+F 0 "D4" H 3541 2916 50  0000 C CNN
+F 1 "Red LED" H 3541 2825 50  0000 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 3550 2700 50  0001 C CNN
+F 3 "~" H 3550 2700 50  0001 C CNN
+	1    3550 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5BB7CDDF
+P 4150 2350
+F 0 "R2" V 3943 2350 50  0000 C CNN
+F 1 "103" V 4034 2350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4080 2350 50  0001 C CNN
+F 3 "~" H 4150 2350 50  0001 C CNN
+	1    4150 2350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5BB7CE79
+P 4150 2700
+F 0 "R3" V 3943 2700 50  0000 C CNN
+F 1 "103" V 4034 2700 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4080 2700 50  0001 C CNN
+F 3 "~" H 4150 2700 50  0001 C CNN
+	1    4150 2700
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D3
+U 1 1 5BB7D031
+P 3550 2350
+F 0 "D3" H 3541 2566 50  0000 C CNN
+F 1 "Yellow LED" H 3541 2475 50  0000 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 3550 2350 50  0001 C CNN
+F 3 "~" H 3550 2350 50  0001 C CNN
+	1    3550 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5BB7D0C8
+P 4150 1950
+F 0 "R1" V 3943 1950 50  0000 C CNN
+F 1 "103" V 4034 1950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4080 1950 50  0001 C CNN
+F 3 "~" H 4150 1950 50  0001 C CNN
+	1    4150 1950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3400 2700 3300 2700
+Wire Wire Line
+	3300 2700 3300 2950
+Text HLabel 4900 2350 2    50   Input ~ 0
+STATUS0
+Text HLabel 4900 1950 2    50   Input ~ 0
+STATUS1
+Wire Wire Line
+	4300 2700 4550 2700
+Wire Wire Line
+	4550 2700 4550 2350
+Connection ~ 4550 2350
+Wire Wire Line
+	4550 2350 4300 2350
+Wire Wire Line
+	3650 2700 3700 2700
+Connection ~ 3700 2700
+Wire Wire Line
+	3700 2700 4000 2700
+Wire Wire Line
+	4000 2350 3700 2350
+Wire Wire Line
+	3400 2350 3250 2350
+Wire Wire Line
+	3250 2350 3250 1950
+Wire Wire Line
+	3250 1950 3400 1950
+Wire Wire Line
+	4900 1950 4900 1600
+Wire Wire Line
+	4900 1600 3250 1600
+Wire Wire Line
+	3250 1600 3250 1950
+Connection ~ 3250 1950
+Wire Wire Line
+	4000 1950 3700 1950
+$Comp
+L Jumper:SolderJumper_3_Open JP1
+U 1 1 5BBB3FC2
+P 4750 2100
+F 0 "JP1" H 4750 2212 50  0000 C CNN
+F 1 "SolderJumper_3_Open" H 4750 2303 50  0000 C CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm" H 4750 2100 50  0001 C CNN
+F 3 "~" H 4750 2100 50  0001 C CNN
+	1    4750 2100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4550 2100 4550 2350
+Wire Wire Line
+	4750 1950 4300 1950
+$Comp
+L power:GND #PWR015
+U 1 1 5BBB4441
+P 5650 2100
+F 0 "#PWR015" H 5650 1850 50  0001 C CNN
+F 1 "GND" H 5655 1927 50  0000 C CNN
+F 2 "" H 5650 2100 50  0001 C CNN
+F 3 "" H 5650 2100 50  0001 C CNN
+	1    5650 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 2100 4950 2100
+Wire Wire Line
+	4550 2350 4900 2350
+$EndSCHEMATC

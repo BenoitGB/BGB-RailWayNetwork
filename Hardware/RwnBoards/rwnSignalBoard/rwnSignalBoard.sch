@@ -1,0 +1,420 @@
+EESchema Schematic File Version 4
+LIBS:rwnSignalBoard-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Microchip_PIC16:PIC16F628A-IP U1
+U 1 1 5BB7C2E4
+P 4500 3350
+F 0 "U1" H 4500 4228 50  0000 C CNN
+F 1 "PIC16F628A-IP" H 4500 4137 50  0000 C CNN
+F 2 "Package_DIP:DIP-18_W7.62mm" H 4500 3350 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/40300c.pdf" H 4500 3350 50  0001 C CNN
+	1    4500 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5BB7C36C
+P 4450 5200
+F 0 "#PWR0101" H 4450 4950 50  0001 C CNN
+F 1 "GND" H 4455 5027 50  0000 C CNN
+F 2 "" H 4450 5200 50  0001 C CNN
+F 3 "" H 4450 5200 50  0001 C CNN
+	1    4450 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0102
+U 1 1 5BB7C3D9
+P 4450 4600
+F 0 "#PWR0102" H 4450 4450 50  0001 C CNN
+F 1 "VCC" H 4467 4773 50  0000 C CNN
+F 2 "" H 4450 4600 50  0001 C CNN
+F 3 "" H 4450 4600 50  0001 C CNN
+	1    4450 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5BB7C414
+P 4450 4900
+F 0 "C1" H 4565 4946 50  0000 L CNN
+F 1 "100nF" H 4565 4855 50  0000 L CNN
+F 2 "" H 4488 4750 50  0001 C CNN
+F 3 "~" H 4450 4900 50  0001 C CNN
+	1    4450 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 4600 4450 4750
+Wire Wire Line
+	4450 5050 4450 5200
+$Sheet
+S 2300 2900 800  700 
+U 5BB7C79D
+F0 "RS485Block" 50
+F1 "../Blocks/rwnRS485Block.sch" 50
+F2 "RX" O R 3100 3050 50 
+F3 "TX" I R 3100 3150 50 
+F4 "RWRS" I R 3100 3250 50 
+$EndSheet
+$Comp
+L power:GND #PWR0103
+U 1 1 5BB7C923
+P 4500 4150
+F 0 "#PWR0103" H 4500 3900 50  0001 C CNN
+F 1 "GND" H 4505 3977 50  0000 C CNN
+F 2 "" H 4500 4150 50  0001 C CNN
+F 3 "" H 4500 4150 50  0001 C CNN
+	1    4500 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0104
+U 1 1 5BB7C952
+P 4500 2350
+F 0 "#PWR0104" H 4500 2200 50  0001 C CNN
+F 1 "VCC" H 4517 2523 50  0000 C CNN
+F 2 "" H 4500 2350 50  0001 C CNN
+F 3 "" H 4500 2350 50  0001 C CNN
+	1    4500 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 2650 4500 2350
+Wire Wire Line
+	4500 4150 4500 4050
+Wire Wire Line
+	3400 3050 3100 3050
+Wire Wire Line
+	3400 3150 3100 3150
+Wire Wire Line
+	3400 3250 3100 3250
+$Sheet
+S 7500 2800 1600 1150
+U 5BBC86A5
+F0 "rwnSLIBlock" 50
+F1 "../Blocks/rwnSLIBlock.sch" 50
+F2 "STATUS0" I L 7500 3050 50 
+F3 "STATUS1" I L 7500 3400 50 
+$EndSheet
+$Comp
+L power:GND #PWR02
+U 1 1 5BBC87E2
+P 6950 3450
+F 0 "#PWR02" H 6950 3200 50  0001 C CNN
+F 1 "GND" H 6955 3277 50  0000 C CNN
+F 2 "" H 6950 3450 50  0001 C CNN
+F 3 "" H 6950 3450 50  0001 C CNN
+	1    6950 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 3450 6950 3400
+Wire Wire Line
+	6950 3400 7500 3400
+Wire Wire Line
+	7500 3050 6450 3050
+Wire Wire Line
+	6450 3050 6450 3350
+Wire Wire Line
+	6450 3350 5600 3350
+$Sheet
+S 6300 4350 1050 350 
+U 5BBC89E6
+F0 "rwnResetBlock" 50
+F1 "../Blocks/rwnResetBlock.sch" 50
+F2 "RESET" I L 6300 4500 50 
+$EndSheet
+Wire Wire Line
+	5600 3450 6100 3450
+Wire Wire Line
+	6100 3450 6100 4500
+Wire Wire Line
+	6100 4500 6300 4500
+$Comp
+L Connector_Generic:Conn_02x07_Odd_Even J2
+U 1 1 5BBC8F1F
+P 2550 6000
+F 0 "J2" H 2600 6517 50  0000 C CNN
+F 1 "Conn_02x07_Odd_Even" H 2600 6426 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x07_P2.54mm_Vertical" H 2550 6000 50  0001 C CNN
+F 3 "~" H 2550 6000 50  0001 C CNN
+	1    2550 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 5BBC8FBA
+P 3200 5700
+F 0 "R7" V 2993 5700 50  0000 C CNN
+F 1 "R" V 3084 5700 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 3130 5700 50  0001 C CNN
+F 3 "~" H 3200 5700 50  0001 C CNN
+	1    3200 5700
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R11
+U 1 1 5BBC9021
+P 3450 5800
+F 0 "R11" V 3243 5800 50  0000 C CNN
+F 1 "R" V 3334 5800 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 3380 5800 50  0001 C CNN
+F 3 "~" H 3450 5800 50  0001 C CNN
+	1    3450 5800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 5BBC9057
+P 3200 5900
+F 0 "R8" V 2993 5900 50  0000 C CNN
+F 1 "R" V 3084 5900 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 3130 5900 50  0001 C CNN
+F 3 "~" H 3200 5900 50  0001 C CNN
+	1    3200 5900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R12
+U 1 1 5BBC90E7
+P 3500 6200
+F 0 "R12" V 3293 6200 50  0000 C CNN
+F 1 "R" V 3384 6200 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 3430 6200 50  0001 C CNN
+F 3 "~" H 3500 6200 50  0001 C CNN
+	1    3500 6200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R10
+U 1 1 5BBC9119
+P 3200 6300
+F 0 "R10" V 2993 6300 50  0000 C CNN
+F 1 "R" V 3084 6300 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 3130 6300 50  0001 C CNN
+F 3 "~" H 3200 6300 50  0001 C CNN
+	1    3200 6300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5BBC914D
+P 2050 6300
+F 0 "R6" V 1843 6300 50  0000 C CNN
+F 1 "R" V 1934 6300 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 1980 6300 50  0001 C CNN
+F 3 "~" H 2050 6300 50  0001 C CNN
+	1    2050 6300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5BBC91A1
+P 1850 6200
+F 0 "R2" V 1643 6200 50  0000 C CNN
+F 1 "R" V 1734 6200 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 1780 6200 50  0001 C CNN
+F 3 "~" H 1850 6200 50  0001 C CNN
+	1    1850 6200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5BBC9449
+P 2050 6100
+F 0 "R5" V 1843 6100 50  0000 C CNN
+F 1 "R" V 1934 6100 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 1980 6100 50  0001 C CNN
+F 3 "~" H 2050 6100 50  0001 C CNN
+	1    2050 6100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5BBC947B
+P 2050 5900
+F 0 "R4" V 1843 5900 50  0000 C CNN
+F 1 "R" V 1934 5900 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 1980 5900 50  0001 C CNN
+F 3 "~" H 2050 5900 50  0001 C CNN
+	1    2050 5900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5BBC94B7
+P 1800 5800
+F 0 "R1" V 1593 5800 50  0000 C CNN
+F 1 "R" V 1684 5800 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 1730 5800 50  0001 C CNN
+F 3 "~" H 1800 5800 50  0001 C CNN
+	1    1800 5800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5BBC94F3
+P 2050 5700
+F 0 "R3" V 1843 5700 50  0000 C CNN
+F 1 "R" V 1934 5700 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 1980 5700 50  0001 C CNN
+F 3 "~" H 2050 5700 50  0001 C CNN
+	1    2050 5700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3050 5700 2850 5700
+Wire Wire Line
+	3300 5800 2850 5800
+Wire Wire Line
+	3050 5900 2850 5900
+Wire Wire Line
+	3350 6200 2850 6200
+Wire Wire Line
+	3050 6300 2850 6300
+Wire Wire Line
+	2350 6300 2200 6300
+Wire Wire Line
+	2350 6200 2000 6200
+Wire Wire Line
+	2350 6100 2200 6100
+Wire Wire Line
+	2350 5900 2200 5900
+Wire Wire Line
+	2350 5800 1950 5800
+Wire Wire Line
+	2350 5700 2200 5700
+$Comp
+L power:VCC #PWR01
+U 1 1 5BBCBC4A
+P 1400 6000
+F 0 "#PWR01" H 1400 5850 50  0001 C CNN
+F 1 "VCC" H 1417 6173 50  0000 C CNN
+F 2 "" H 1400 6000 50  0001 C CNN
+F 3 "" H 1400 6000 50  0001 C CNN
+	1    1400 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 6000 1400 6000
+Text Label 3700 5700 0    50   ~ 0
+R
+Text Label 3700 5800 0    50   ~ 0
+AV
+Text Label 3700 5900 0    50   ~ 0
+S
+Text Label 3700 6200 0    50   ~ 0
+Opt
+Text Label 3700 6300 0    50   ~ 0
+ID3
+Wire Wire Line
+	3050 6100 2850 6100
+$Comp
+L Device:R R9
+U 1 1 5BBC90B3
+P 3200 6100
+F 0 "R9" V 2993 6100 50  0000 C CNN
+F 1 "R" V 3084 6100 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 3130 6100 50  0001 C CNN
+F 3 "~" H 3200 6100 50  0001 C CNN
+	1    3200 6100
+	0    1    1    0   
+$EndComp
+Text Label 3700 6100 0    50   ~ 0
+C-CV
+Text Label 1600 6300 0    50   ~ 0
+ID2
+Text Label 1600 6200 0    50   ~ 0
+ID1
+Text Label 1600 6100 0    50   ~ 0
+MA
+Text Label 1600 5900 0    50   ~ 0
+VL
+Text Label 1600 5800 0    50   ~ 0
+OE
+Text Label 1600 5700 0    50   ~ 0
+RR
+Wire Wire Line
+	3750 5700 3350 5700
+Wire Wire Line
+	3700 5800 3600 5800
+Wire Wire Line
+	3700 5900 3350 5900
+Wire Wire Line
+	3700 6100 3350 6100
+Wire Wire Line
+	3700 6200 3650 6200
+Wire Wire Line
+	3700 6300 3350 6300
+Wire Wire Line
+	1900 5700 1600 5700
+Wire Wire Line
+	1900 5900 1600 5900
+Wire Wire Line
+	1650 5800 1600 5800
+Wire Wire Line
+	1900 6100 1600 6100
+Wire Wire Line
+	1700 6200 1600 6200
+Wire Wire Line
+	1900 6300 1600 6300
+Text Label 3200 2950 0    50   ~ 0
+C-CV
+Text Label 3200 3350 0    50   ~ 0
+S
+Text Label 3200 3450 0    50   ~ 0
+ID3
+Text Label 3200 3550 0    50   ~ 0
+ID2
+Text Label 3200 3650 0    50   ~ 0
+ID1
+Wire Wire Line
+	3400 3350 3200 3350
+Wire Wire Line
+	3400 3450 3200 3450
+Wire Wire Line
+	3400 3650 3200 3650
+Wire Wire Line
+	3400 3550 3200 3550
+Wire Wire Line
+	3400 2950 3200 2950
+Text Label 5800 2950 0    50   ~ 0
+OE
+Text Label 5800 3050 0    50   ~ 0
+RR
+Text Label 5800 3150 0    50   ~ 0
+R
+Text Label 5800 3250 0    50   ~ 0
+AV
+Text Label 5800 3550 0    50   ~ 0
+MA
+Text Label 5800 3650 0    50   ~ 0
+VL
+Wire Wire Line
+	5800 2950 5600 2950
+Wire Wire Line
+	5800 3050 5600 3050
+Wire Wire Line
+	5800 3150 5600 3150
+Wire Wire Line
+	5800 3250 5600 3250
+Wire Wire Line
+	5800 3550 5600 3550
+Wire Wire Line
+	5800 3650 5600 3650
+$EndSCHEMATC

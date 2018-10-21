@@ -1,0 +1,267 @@
+EESchema Schematic File Version 4
+LIBS:rwnStarterBoard-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 7
+Title "RailWay Network - RS485 Block"
+Date "2018-10-05"
+Rev "1.1"
+Comp "BGB Developpement"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:+12V #PWR013
+U 1 1 5BB6A2F3
+P 5400 2150
+F 0 "#PWR013" H 5400 2000 50  0001 C CNN
+F 1 "+12V" H 5415 2323 50  0000 C CNN
+F 2 "" H 5400 2150 50  0001 C CNN
+F 3 "" H 5400 2150 50  0001 C CNN
+	1    5400 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR05
+U 1 1 5BB6A456
+P 2350 1950
+F 0 "#PWR05" H 2350 1800 50  0001 C CNN
+F 1 "VCC" H 2367 2123 50  0000 C CNN
+F 2 "" H 2350 1950 50  0001 C CNN
+F 3 "" H 2350 1950 50  0001 C CNN
+	1    2350 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5BB6A47F
+P 3450 2300
+F 0 "C2" H 3565 2346 50  0000 L CNN
+F 1 "100nF" H 3565 2255 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 3488 2150 50  0001 C CNN
+F 3 "~" H 3450 2300 50  0001 C CNN
+	1    3450 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Interface_UART:MAX3483 U2
+U 1 1 5BB6AC7E
+P 2350 2600
+F 0 "U2" H 2350 3278 50  0000 C CNN
+F 1 "MAX3483" H 2350 3187 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 2350 1900 50  0001 C CNN
+F 3 "https://datasheets.maximintegrated.com/en/ds/MAX3483-MAX3491.pdf" H 2350 2650 50  0001 C CNN
+	1    2350 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR07
+U 1 1 5BB6AD4C
+P 3450 1950
+F 0 "#PWR07" H 3450 1800 50  0001 C CNN
+F 1 "VCC" H 3467 2123 50  0000 C CNN
+F 2 "" H 3450 1950 50  0001 C CNN
+F 3 "" H 3450 1950 50  0001 C CNN
+	1    3450 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 5BB6AD5B
+P 3450 2850
+F 0 "#PWR08" H 3450 2600 50  0001 C CNN
+F 1 "GND" H 3455 2677 50  0000 C CNN
+F 2 "" H 3450 2850 50  0001 C CNN
+F 3 "" H 3450 2850 50  0001 C CNN
+	1    3450 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 1950 3450 2150
+Wire Wire Line
+	2350 1950 2350 2100
+$Comp
+L power:GND #PWR06
+U 1 1 5BB6AF02
+P 2350 3250
+F 0 "#PWR06" H 2350 3000 50  0001 C CNN
+F 1 "GND" H 2355 3077 50  0000 C CNN
+F 2 "" H 2350 3250 50  0001 C CNN
+F 3 "" H 2350 3250 50  0001 C CNN
+	1    2350 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 3200 2350 3250
+Wire Wire Line
+	3450 2850 3450 2450
+$Comp
+L Connector:RJ12 J1
+U 1 1 5BB6B2B5
+P 4500 2350
+F 0 "J1" H 4555 2917 50  0000 C CNN
+F 1 "RJ12" H 4555 2826 50  0000 C CNN
+F 2 "Connector_RJ:RJ12_Amphenol_54601" V 4500 2375 50  0001 C CNN
+F 3 "~" V 4500 2375 50  0001 C CNN
+	1    4500 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR012
+U 1 1 5BB6B307
+P 5200 2450
+F 0 "#PWR012" H 5200 2200 50  0001 C CNN
+F 1 "GND" H 5205 2277 50  0000 C CNN
+F 2 "" H 5200 2450 50  0001 C CNN
+F 3 "" H 5200 2450 50  0001 C CNN
+	1    5200 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 2450 4900 2450
+$Comp
+L Diode:1N4001 D1
+U 1 1 5BB6B6F0
+P 5100 2150
+F 0 "D1" H 5100 1934 50  0000 C CNN
+F 1 "1N4001" H 5100 2025 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 5100 1975 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 5100 2150 50  0001 C CNN
+	1    5100 2150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5400 2150 5250 2150
+Wire Wire Line
+	4950 2150 4900 2150
+Text Label 5100 2350 0    50   ~ 0
+B
+Text Label 5100 2250 0    50   ~ 0
+A
+Wire Wire Line
+	5100 2250 4900 2250
+Wire Wire Line
+	5100 2350 4900 2350
+Text Label 2950 2500 0    50   ~ 0
+B
+Text Label 2950 2800 0    50   ~ 0
+A
+Wire Wire Line
+	2950 2500 2750 2500
+Wire Wire Line
+	2950 2800 2750 2800
+$Comp
+L Regulator_Linear:LM78L05_TO92 U3
+U 1 1 5BB6C223
+P 4600 3050
+F 0 "U3" H 4600 3292 50  0000 C CNN
+F 1 "LM78L05_TO92" H 4600 3201 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4600 3275 50  0001 C CIN
+F 3 "http://www.fairchildsemi.com/ds/LM/LM78L05A.pdf" H 4600 3000 50  0001 C CNN
+	1    4600 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C4
+U 1 1 5BB6C371
+P 5100 3200
+F 0 "C4" H 5215 3246 50  0000 L CNN
+F 1 "1µf" H 5215 3155 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 5138 3050 50  0001 C CNN
+F 3 "~" H 5100 3200 50  0001 C CNN
+	1    5100 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR010
+U 1 1 5BB6C3B6
+P 4600 3550
+F 0 "#PWR010" H 4600 3300 50  0001 C CNN
+F 1 "GND" H 4605 3377 50  0000 C CNN
+F 2 "" H 4600 3550 50  0001 C CNN
+F 3 "" H 4600 3550 50  0001 C CNN
+	1    4600 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR09
+U 1 1 5BB6C431
+P 4050 2950
+F 0 "#PWR09" H 4050 2800 50  0001 C CNN
+F 1 "+12V" H 4065 3123 50  0000 C CNN
+F 2 "" H 4050 2950 50  0001 C CNN
+F 3 "" H 4050 2950 50  0001 C CNN
+	1    4050 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR011
+U 1 1 5BB6C4C8
+P 5100 2950
+F 0 "#PWR011" H 5100 2800 50  0001 C CNN
+F 1 "VCC" H 5117 3123 50  0000 C CNN
+F 2 "" H 5100 2950 50  0001 C CNN
+F 3 "" H 5100 2950 50  0001 C CNN
+	1    5100 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 2950 5100 3050
+Wire Wire Line
+	4900 3050 5100 3050
+Connection ~ 5100 3050
+Wire Wire Line
+	5100 3350 5100 3550
+Wire Wire Line
+	5100 3550 4600 3550
+Wire Wire Line
+	4600 3350 4600 3550
+Connection ~ 4600 3550
+Wire Wire Line
+	4050 3350 4050 3550
+Wire Wire Line
+	4050 3550 4600 3550
+Wire Wire Line
+	4300 3050 4050 3050
+Wire Wire Line
+	4050 2950 4050 3050
+$Comp
+L Device:CP C3
+U 1 1 5BB6CDC8
+P 4050 3200
+F 0 "C3" H 4168 3246 50  0000 L CNN
+F 1 "10µF" H 4168 3155 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D8.0mm_P2.50mm" H 4088 3050 50  0001 C CNN
+F 3 "~" H 4050 3200 50  0001 C CNN
+	1    4050 3200
+	1    0    0    -1  
+$EndComp
+Connection ~ 4050 3050
+Wire Wire Line
+	1950 2600 1950 2650
+Text HLabel 1600 2500 0    50   Output ~ 0
+RX
+Text HLabel 1600 2800 0    50   Input ~ 0
+TX
+Text HLabel 1600 2650 0    50   Input ~ 0
+RWRS
+Wire Wire Line
+	1950 2500 1600 2500
+Wire Wire Line
+	1600 2650 1950 2650
+Connection ~ 1950 2650
+Wire Wire Line
+	1950 2650 1950 2700
+Wire Wire Line
+	1950 2800 1600 2800
+Connection ~ 2750 2500
+Connection ~ 2750 2800
+Connection ~ 1950 2500
+Connection ~ 1950 2800
+Connection ~ 1950 2600
+Connection ~ 1950 2700
+$EndSCHEMATC

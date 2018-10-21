@@ -1,0 +1,125 @@
+EESchema Schematic File Version 4
+LIBS:rwnStarterBoard-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 7
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 3300 3350 0    50   Input ~ 0
+PWM
+Text HLabel 3300 3500 0    50   Input ~ 0
+DIR
+Text HLabel 3300 3650 0    50   Input ~ 0
+-DIR
+$Comp
+L power:+12V #PWR047
+U 1 1 5BC64ED5
+P 4400 2750
+F 0 "#PWR047" H 4400 2600 50  0001 C CNN
+F 1 "+12V" H 4415 2923 50  0000 C CNN
+F 2 "" H 4400 2750 50  0001 C CNN
+F 3 "" H 4400 2750 50  0001 C CNN
+	1    4400 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 Track1
+U 1 1 5BC65149
+P 6200 3100
+F 0 "Track1" H 6279 3092 50  0000 L CNN
+F 1 "Track" H 6279 3001 50  0000 L CNN
+F 2 "TerminalBlock_Dinkle:TerminalBlock_Dinkle_DT-55-B01X-02_P10.00mm" H 6200 3100 50  0001 C CNN
+F 3 "~" H 6200 3100 50  0001 C CNN
+	1    6200 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L UDN2951Z:UDN2951Z U9
+U 1 1 5BC68A44
+P 4700 3050
+F 0 "U9" H 4825 3425 50  0000 C CNN
+F 1 "UDN2951Z" H 4825 3334 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-5_P3.4x3.7mm_StaggerEven_Lead3.8mm_Vertical" H 4650 3350 50  0001 C CNN
+F 3 "" H 4650 3350 50  0001 C CNN
+	1    4700 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L UDN2951Z:UDN2951Z U10
+U 1 1 5BC68B7E
+P 4700 3550
+F 0 "U10" H 4825 3925 50  0000 C CNN
+F 1 "UDN2951Z" H 4825 3834 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-5_P3.4x3.7mm_StaggerEven_Lead3.8mm_Vertical" H 4650 3850 50  0001 C CNN
+F 3 "" H 4650 3850 50  0001 C CNN
+	1    4700 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 3100 6000 3100
+Wire Wire Line
+	6000 3200 6000 3600
+Wire Wire Line
+	5150 3600 6000 3600
+Wire Wire Line
+	4500 2900 4400 2900
+Wire Wire Line
+	4400 2900 4400 2750
+Wire Wire Line
+	4500 3400 4400 3400
+Wire Wire Line
+	4400 3400 4400 2900
+Connection ~ 4400 2900
+Wire Wire Line
+	4500 3100 3700 3100
+Wire Wire Line
+	3700 3100 3700 3350
+Wire Wire Line
+	3700 3350 3300 3350
+Wire Wire Line
+	4500 3600 3700 3600
+Wire Wire Line
+	3700 3600 3700 3350
+Connection ~ 3700 3350
+Wire Wire Line
+	4500 3000 3850 3000
+Wire Wire Line
+	3850 3000 3850 3500
+Wire Wire Line
+	3850 3500 3300 3500
+Wire Wire Line
+	4500 3500 3900 3500
+Wire Wire Line
+	3900 3500 3900 3650
+Wire Wire Line
+	3900 3650 3300 3650
+$Comp
+L power:GND #PWR046
+U 1 1 5BC6979F
+P 4300 3750
+F 0 "#PWR046" H 4300 3500 50  0001 C CNN
+F 1 "GND" H 4305 3577 50  0000 C CNN
+F 2 "" H 4300 3750 50  0001 C CNN
+F 3 "" H 4300 3750 50  0001 C CNN
+	1    4300 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 3250 4250 3250
+Wire Wire Line
+	4250 3750 4300 3750
+Wire Wire Line
+	4250 3250 4250 3750
+Wire Wire Line
+	4500 3750 4300 3750
+Connection ~ 4300 3750
+$EndSCHEMATC
