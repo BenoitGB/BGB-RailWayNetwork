@@ -1,1 +1,3 @@
-*.pro linguist-language=KiCad Project
+*.pro -linguist-vendored
+*.pcb linguist-detectable
+*.sch linguist-detectable
